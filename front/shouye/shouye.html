@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="jquery.indexSlidePattern.js"></script>
+<script type="text/javascript" src="scroll.js"></script>
+<script language="javascript">
+$(document).ready(function(e){
+	$('.list_lh li:even').addClass('lieven');//左侧最新动态函数
+
+	  var opt	=	{
+		"speed"	:	"fast"		,	//变换速度,三速度可选 slow,normal,fast;
+		"by"	:	"mouseover"		,	//触发事件,click或者mouseover;
+		"auto"	:	true		,	//是否自动播放;
+		"sec"	:	3000	 		//自动播放间隔;
+	  };
+	  $("#demo").IMGDEMO(opt);
+});
+
+$(function(){                       //左侧最新动态滚动函数
+	$("div.list_lh").myScroll({
+		speed:40, 
+		rowHeight:68 
+	});
+});
+</script>
+<style type="text/css">
+*{padding:0;margin:0;list-style-type:none;}
+a,img{border:0;}
+/* demo */
+/*五张图片在缩略图时所显示的位置调整*/
+#demo li:nth-of-type(1) img{ transform: translate(-210px); -moz-transform:translate(-210px) ;}
+#demo li:nth-of-type(2) img{ transform: translate(-180px);-moz-transform:translate(-180px) ;}
+#demo li:nth-of-type(3) img{ transform: translate(-380px);-moz-transform:translate(-380px) ;}
+#demo li:nth-of-type(4) img{ transform: translate(-450px);-moz-transform:translate(-450px) ;}
+#demo li:nth-of-type(5) img{ transform: translate(-320px);-moz-transform:translate(-320px) ;}
+#demo{width:910px;height:332px;margin:20px auto 0 auto;}
+#demo img{width: 580px; height: 332px; max-width: 820px;}
+#demo li{float:left;position:relative;width:96px;height:100%;overflow:hidden;cursor:pointer; transition:0.5s; transform-origin:bottom;filter:alpha(opacity=50);opacity:0.5;}
+#demo li img{transition:1.2s;}
+#demo li a{display:block;}
+#demo li div{position:absolute;bottom:0;left:0;width:100%;background:#000;line-height:32px;filter:alpha(opacity=70);opacity:0.7;text-indent:2em;}
+#demo li div a{color:#FFF;text-decoration:none;}
+#demo li div a:hover{color:#F00;text-decoration:none;}
+#demo li.active{cursor:pointer; transform:scale(1.02,1.08); -moz-transform:scale(1.02,1.08); z-index:3;width:520px;filter:alpha(opacity=100);opacity:1;}
+#demo li.active img{transform:translate(0px);}
+#demo li:nth-of-type(1){transform-origin:bottom left;}
+#demo li:nth-of-type(5){transform-origin:bottom right;}
+</style>
+<meta charset="utf-8">
+<title>淮南OK论坛</title>
+<link rel="stylesheet" type="text/css" href="shouye.css">
+</head>
+
+<body style="background:#f6f6f6; font-size: 14px;font-family: microsoft yahei;">
+<div class="top">
+<ul class="top_content">
+<li class="top_content_li"><a href="file:///E:/HuaiNanOkForum/front/register/register.html" class="top_content_text">注册</a></li>
+<li class="top_content_li"><a href="file:///E:/HuaiNanOkForum/front/land/land.html" class="top_content_text">登录</a></li>
+<li class="top_content_li"><image style='width:12px;height:12px;margin-left:10px;' class="top_content_text"  src='file:///E:/HuaiNanOkForum/front/images/tele.png'></image></li>
+<li class="top_content_li"><span  class="top_content_text" style="margin-left:-12px;">0554-3232565</span></li>
+</ul>
+</div>
+<div class="banner">
+<div  class="logo">
+<image src="#" alt="logo"></image>
+</div>
+<form>
+<div class="f1">
+<input type="text" placeholder="请输入要搜索的职位" class="search f1"></input>
+<input type="submit" class="btn " value="搜索" style="width:88px;"></input>
+</div>
+</form>
+<div class="erweima">
+<image src="#" alt="小程序二维码"></image>
+</div>
+
+</div>
+<div class="nav">
+<ul class="nav_content">
+<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/shouye/shouye.html" class="nav_content_text" title="nav">首页</a></li>
+<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/recruit/recruit.html" class="nav_content_text" title="nav">招聘</a></li>
+<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/job/job.html" class="nav_content_text" title="nav">求职</a></li>
+<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/discuss/discuss.html" class="nav_content_text" title="nav">交流</a></li>
+<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/market/market.html" class="nav_content_text" title="nav">市场</a></li>
+<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/server/server.html" class="nav_content_text" title="nav">服务</a></li>
+<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/study/study.html" class="nav_content_text" title="nav">学习</a></li>
+<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/information/information.html" class="nav_content_text" title="nav">资讯</a></li>
+<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/active/active.html" class="nav_content_text" title="nav">活动</a></li>
+</ul>
+</div>
+<div class="main">
+<div class="new">
+	<div class="bcon">
+		<h1><b>最新动态</b></h1>
+
+		<div class="list_lh">
+			<ul>
+				<li>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank">1000000</a><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="btn_lh">2000</a><em>测试啊</em></p>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="a_blue">这是测试页面，看看行不行</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank">2000000</a><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="btn_lh">1000</a><em>测试啊</em></p>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="a_blue">这是测试页面，看看行不行</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank">3000000</a><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="btn_lh">2000</a><em>测试啊</em></p>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="a_blue">这是测试页面，看看行不行</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank">4000000</a><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="btn_lh">2000</a><em>测试啊</em></p>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="a_blue">这是测试页面，看看行不行</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank">5000000</a><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="btn_lh">2000</a><em>测试啊</em></p>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="a_blue">这是测试页面，看看行不行</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank">6000000</a><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="btn_lh">2000</a><em>测试啊</em></p>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="a_blue">这是测试页面，看看行不行</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank">7000000</a><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="btn_lh">2000</a><em>测试啊</em></p>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="a_blue">这是测试页面，看看行不行</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank">8000000</a><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="btn_lh">2000</a><em>测试啊</em></p>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="a_blue">这是测试页面，看看行不行</a><span>17:28:05</span></p>
+				</li>
+				<li>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank">9000000</a><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="btn_lh">2000</a><em>测试啊</em></p>
+					<p><a href="http://sc.chinaz.com/jiaoben/" target="_blank" class="a_blue">这是测试页面，看看行不行</a><span>17:28:05</span></p>
+				</li>
+				
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+<div class="swiper">
+<ul id="demo">
+	<li class="active">
+		<a href="http://sc.chinaz.com/jiaoben/"><img src="file://E:/HuaiNanOkForum/front/images/1.jpg" /></a>
+		<div><a href="http://sc.chinaz.com/jiaoben/">最新产品已经上线啦！哈哈啊哈</a></div>
+	</li>
+	<li>
+		<a href="http://sc.chinaz.com/jiaoben/"><img src="file://E:/HuaiNanOkForum/front/images/2.jpg"  /></a>
+		<div><a href="http://sc.chinaz.com/jiaoben/">最新产品已经上线啦！哈哈啊哈</a></div>
+	</li>
+	<li>
+		<a href="http://sc.chinaz.com/jiaoben/"><img src="file://E:/HuaiNanOkForum/front/images/3.jpg"  /></a>
+		<div><a href="http://sc.chinaz.com/jiaoben/">最新产品已经上线啦！哈哈啊哈</a></div>
+	</li>
+	<li>
+		<a href="http://sc.chinaz.com/jiaoben/"><img src="file://E:/HuaiNanOkForum/front/images/4.jpg"  /></a>
+		<div><a href="http://sc.chinaz.com/jiaoben/">最新产品已经上线啦！哈哈啊哈</a></div>
+	</li>
+	<li>
+		<a href="http://sc.chinaz.com/jiaoben/"><img src="file://E:/HuaiNanOkForum/front/images/5.jpg"  /></a>
+		<div><a href="http://sc.chinaz.com/jiaoben/">最新产品已经上线啦！哈哈啊哈</a></div>
+	</li>
+</ul>
+</div>
+</div>
+<div class="theme">
+	<div class='huainanimg'><image src='file://E:/HuaiNanOkForum/front/images/66.png' style='width:100%;height:100%;'></image></div>
+	<div class='main-title'><a href='#'><h1 class='lit-h1'>新冠肺炎最新疫情通报</h1></a>
+	<p class='lit-content'>也许志南也羡慕这小河流水，也羡慕这杏花雨高起低落随波而流芳的哀愁吧。
+	或许这志南是属相为牛吧，你看这吹面的不寒杨柳依依， <a href="#" style='font-size: 15px; margin-top: 10px; color: rgb(124, 124, 124);'>[详细</a>]</p>
+	
+	<a href='#'><h1 class='lit-h1' style='margin-top: 20px;'>新冠肺炎最新疫情通报</h1></a>
+	<p class='lit-content'>也许志南也羡慕这小河流水，也羡慕这杏花雨高起低落随波而流芳的哀愁吧。
+		或许这志南是属相为牛吧，你看这吹面的不寒杨柳依依， <a href="#" style='font-size: 15px; margin-top: 10px; color: rgb(124, 124, 124);'>[详细</a>]</p>
+	
+		<a href='#'><h1 class='lit-h1' style='margin-top: 20px;'>新冠肺炎最新疫情通报</h1></a>
+		<p class='lit-content'>也许志南也羡慕这小河流水，也羡慕这杏花雨高起低落随波而流芳的哀愁吧。
+			或许这志南是属相为牛吧，你看这吹面的不寒杨柳依依， <a href="#" style='font-size: 15px; margin-top: 10px; color: rgb(124, 124, 124);'>[详细</a>]</p>
+	</div>
+	<div class='land-whole'>
+			<form>
+			<div class="tab_style_div">
+			<a href="#" class="tab_style">账号登录</a>
+			<a href="#" class="tab_style">手机号登录</a>
+			</div>
+			<div class="main_page_input" style="margin-top:10px;">
+			<input type="text" placeholder="用户名" style="margin-top:12px;" class='land-input'></input>
+			</div>
+			<div class="main_page_input" style="margin-top:27px;">
+			<input type="text" placeholder="密码" class='land-input'></input>
+			</div>
+			<div class="main_page_input" style="margin-top:15px;">
+			<input class='land-input' type="submit" value="登录" style="cursor: pointer;text-align: center;
+			border: none;font-size:16px; background:#1b80d8;color:white;"></input>
+			</div>
+			<p style="margin-top:20px;margin-left:27px;font-size:14px; color:grey">没有账号？
+			<a href="#" class="tab_style" style="font-size:14px; margin-left:8px;">前往注册</a>
+			<a href="#" class="tab_style" style="font-size:14px; margin-left:79px;">忘记密码？</a>
+			</p>
+			<p style="margin-top:10px;margin-left:35px;font-size:14px; color: #e5e5e5">—————— <span style="color:grey">&nbsp其他登录方式&nbsp</span> ———————</p>
+			<a href="#"><image src="file:///E:/HuaiNanOkForum/front/images/land-weixin.PNG" style="width:32px; height:32px; margin-left:127px; margin-top:10px;"></image></a>
+			<a href="#"><image src="file:///E:/HuaiNanOkForum/front/images/land-qq.PNG" style="width:32px; height:32px; margin-left:20px; margin-top:10px;"></image></a>
+			</form>
+		
+	</div>
+	</div>
+<div class="ads" style="margin-top: 30px;"><image src='file://E:/HuaiNanOkForum/front/images/11.png' style="width:100%; height: 100%;"></image></div>
+<div class="ads"><image src='file://E:/HuaiNanOkForum/front/images/22.png' style="width:100%; height: 100%;"></image></div>
+<div class="ads"><image src='file://E:/HuaiNanOkForum/front/images/33.png' style="width:100%; height: 100%;"></image></div>
+<div class="ads"><image src='file://E:/HuaiNanOkForum/front/images/44.png' style="width:100%; height: 100%;"></image></div>
+<div class="ads"><image src='file://E:/HuaiNanOkForum/front/images/55.png' style="width:100%; height: 100%;"></image></div>
+
+<div class="content_child">
+<p class='nav-title'>人才招聘</p>
+<div class='content-item'>
+<div class='recruit-content'><!--招聘列表-->
+	<p class='recruit-time'>2020-02-06更新</p>
+<a href="#"><span class='recruit-title'>平面设计师</span></a>
+<span class='recruit-company'>淮南腾昊广告传媒</span>
+<span class='recruit-salary'>￥4000-8000</span>
+<div><!--学历等介绍-->
+<span class='recruit-xueli' style='margin-left: 18px;' >学历：高中</span><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+<span class='recruit-xueli'>经验：1-3年</span><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+<span class='recruit-xueli'>人数：若干人</span><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+<span class='recruit-xueli'>性别：不限</span><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+<span class='recruit-xueli'>地点：安徽省/淮南市/田家庵区</span>
+</div>
+<div>
+	<span class='recruit-fuli'>五险</span>
+	<span class='recruit-fuli'>年终奖</span>
+	<span class='recruit-fuli'>环境好</span>
+	<span class='recruit-fuli'>朝九晚五</span>
+	<span class='recruit-fuli'>加班补助</span>
+	<span class='recruit-fuli'>交通补贴</span>
+	</div>
+</div>
+<div class='recruit-ads'><!--招聘广告-->
+	<image src='#' style='width: 250px;height: 65px; margin-top: 5px;'></image>
+	<image src='#' style='width: 250px;height: 65px;'></image>
+	<image src='#' style='width: 250px;height: 65px;'></image>
+</div>
+<div class='recruit-ads' style='margin-left: 5px;'><!--招聘广告-->
+	<image src='#' style='width: 250px;height: 65px; margin-top: 5px;'></image>
+	<image src='#' style='width: 250px;height: 65px;'></image>
+	<image src='#' style='width: 250px;height: 65px;'></image>
+</div>
+</div>
+
+<div class='content-item'>
+	<div class='recruit-content'><!--招聘列表-->
+		<p class='recruit-time'>2020-02-06更新</p>
+	<a href="#"><span class='recruit-title'>平面设计师</span></a>
+	<span class='recruit-company'>淮南腾昊广告传媒</span>
+	<span class='recruit-salary'>￥4000-8000</span>
+	<div><!--学历等介绍-->
+	<span class='recruit-xueli' style='margin-left: 18px;' >学历：高中</span><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+	<span class='recruit-xueli'>经验：1-3年</span><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+	<span class='recruit-xueli'>人数：若干人</span><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+	<span class='recruit-xueli'>性别：不限</span><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+	<span class='recruit-xueli'>地点：安徽省/淮南市/田家庵区</span>
+	</div>
+	<div>
+		<span class='recruit-fuli'>五险</span>
+		<span class='recruit-fuli'>年终奖</span>
+		<span class='recruit-fuli'>环境好</span>
+		<span class='recruit-fuli'>朝九晚五</span>
+		<span class='recruit-fuli'>加班补助</span>
+		<span class='recruit-fuli'>交通补贴</span>
+		</div>
+	</div>
+	<div class='recruit-ads'><!--招聘广告-->
+		<image src='#' style='width: 250px;height: 65px; margin-top: 5px;'></image>
+		<image src='#' style='width: 250px;height: 65px;'></image>
+		<image src='#' style='width: 250px;height: 65px;'></image>
+	</div>
+	<div class='recruit-ads' style='margin-left: 5px;'><!--招聘广告-->
+		<image src='#' style='width: 250px;height: 65px; margin-top: 5px;'></image>
+		<image src='#' style='width: 250px;height: 65px;'></image>
+		<image src='#' style='width: 250px;height: 65px;'></image>
+	</div>
+	</div>
+
+	<div class='content-item'>
+		<div class='recruit-content'><!--招聘列表-->
+			<p class='recruit-time'>2020-02-06更新</p>
+		<a href="#"><span class='recruit-title'>平面设计师</span></a>
+		<span class='recruit-company'>淮南腾昊广告传媒</span>
+		<span class='recruit-salary'>￥4000-8000</span>
+		<div><!--学历等介绍-->
+		<span class='recruit-xueli' style='margin-left: 18px;' >学历：高中</span><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+		<span class='recruit-xueli'>经验：1-3年</span><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+		<span class='recruit-xueli'>人数：若干人</span><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+		<span class='recruit-xueli'>性别：不限</span><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+		<span class='recruit-xueli'>地点：安徽省/淮南市/田家庵区</span>
+		</div>
+		<div>
+			<span class='recruit-fuli'>五险</span>
+			<span class='recruit-fuli'>年终奖</span>
+			<span class='recruit-fuli'>环境好</span>
+			<span class='recruit-fuli'>朝九晚五</span>
+			<span class='recruit-fuli'>加班补助</span>
+			<span class='recruit-fuli'>交通补贴</span>
+			</div>
+		</div>
+		<div class='recruit-ads'><!--招聘广告-->
+			<image src='#' style='width: 250px;height: 65px; margin-top: 5px;'></image>
+			<image src='#' style='width: 250px;height: 65px;'></image>
+			<image src='#' style='width: 250px;height: 65px;'></image>
+		</div>
+		<div class='recruit-ads' style='margin-left: 5px;'><!--招聘广告-->
+			<image src='#' style='width: 250px;height: 65px; margin-top: 5px;'></image>
+			<image src='#' style='width: 250px;height: 65px;'></image>
+			<image src='#' style='width: 250px;height: 65px;'></image>
+		</div>
+		</div>
+		<a href='#'><div class='more' style='margin-left: 20px;'>查看更多职位>></div></a>
+</div>
+</div>
+</div>
+</div>
+
+<div class="content_child" style='height: 820px;'>
+	<p class='nav-title' style='color: rgb(253, 123, 17); border-bottom: 3px solid rgb(253, 123, 17) ;'>二手市场</p>
+	<span class='nav-title' style='color: rgb(219, 4, 104); border-bottom: 3px solid rgb(219, 4, 104);margin-left: 564px;'>同城交流</span>
+	<div style=' display: flex;flex-direction: row;'>
+		<div style=' display: flex;flex-direction:column; width:50%'>
+	<div class='content-item' style='width:100%;height: 140px;margin-left: 38px;background-color: rgb(255, 251, 245);margin-top: 4px;'>
+	<image src='#' style='width: 150px; height: 110px;margin-top: 20px;'></image>
+	<div class='market-content'>
+		<p class='market-title'>全新TinkPad苹果华硕商务游戏笔记本平板电脑特价销售</p>
+		<p class='market-detail'>真的是全新的啊，不行你看看配置，图片什么都有，要的速来...</p>
+		<p class='market-detail'>田家庵-阳光国际城<span style='margin-left: 170px; color: rgb(255, 0, 0);font-size: 16px;'>￥1200</span></p>
+		<p class='market-detail' style='margin-top: 5px; font-size: 13px;'>2020-02-05</p>
+	</div>
+</div>
+<div class='content-item' style='width:100%;height: 140px;margin-left: 38px;background-color: rgb(255, 251, 245);margin-top: 4px;'>
+	<image src='#' style='width: 150px; height: 110px;margin-top: 20px;'></image>
+	<div class='market-content'>
+		<p class='market-title'>全新TinkPad苹果华硕商务游戏笔记本平板电脑特价销售</p>
+		<p class='market-detail'>真的是全新的啊，不行你看看配置，图片什么都有，要的速来...</p>
+		<p class='market-detail'>田家庵-阳光国际城<span style='margin-left: 170px; color: rgb(255, 0, 0);font-size: 16px;'>￥1200</span></p>
+		<p class='market-detail' style='margin-top: 5px; font-size: 13px;'>2020-02-05</p>
+	</div>
+</div>
+<div class='content-item' style='width:100%;height: 140px;margin-left: 38px;background-color: rgb(255, 251, 245);margin-top: 4px;'>
+	<image src='#' style='width: 150px; height: 110px;margin-top: 20px;'></image>
+	<div class='market-content'>
+		<p class='market-title'>全新TinkPad苹果华硕商务游戏笔记本平板电脑特价销售</p>
+		<p class='market-detail'>真的是全新的啊，不行你看看配置，图片什么都有，要的速来...</p>
+		<p class='market-detail'>田家庵-阳光国际城<span style='margin-left: 170px; color: rgb(255, 0, 0);font-size: 16px;'>￥1200</span></p>
+		<p class='market-detail' style='margin-top: 5px; font-size: 13px;'>2020-02-05</p>
+	</div>
+</div>
+<div class='content-item' style='width:100%;height: 140px;margin-left: 38px;background-color: rgb(255, 251, 245);margin-top: 4px;'>
+	<image src='#' style='width: 150px; height: 110px;margin-top: 20px;'></image>
+	<div class='market-content'>
+		<p class='market-title'>全新TinkPad苹果华硕商务游戏笔记本平板电脑特价销售</p>
+		<p class='market-detail'>真的是全新的啊，不行你看看配置，图片什么都有，要的速来...</p>
+		<p class='market-detail'>田家庵-阳光国际城<span style='margin-left: 170px; color: rgb(255, 0, 0);font-size: 16px;'>￥1200</span></p>
+		<p class='market-detail' style='margin-top: 5px; font-size: 13px;'>2020-02-05</p>
+	</div>
+</div>
+<div class='content-item' style='width:100%;height: 140px;margin-left: 38px;background-color: rgb(255, 251, 245);margin-top: 4px;'>
+	<image src='#' style='width: 150px; height: 110px;margin-top: 20px;'></image>
+	<div class='market-content'>
+		<p class='market-title'>全新TinkPad苹果华硕商务游戏笔记本平板电脑特价销售</p>
+		<p class='market-detail'>真的是全新的啊，不行你看看配置，图片什么都有，要的速来...</p>
+		<p class='market-detail'>田家庵-阳光国际城<span style='margin-left: 170px; color: rgb(255, 0, 0);font-size: 16px;'>￥1200</span></p>
+		<p class='market-detail' style='margin-top: 5px; font-size: 13px;'>2020-02-05</p>
+	</div>
+</div>
+<a href='#'><div class='more' style='color: rgb(253, 123, 17);'>查看更多>></div></a>
+	</div><!--左侧二手市场栏目-->
+	<div class='discuss'> <!--右侧同城交流栏目-->
+
+	<div style='margin-top: 10px;'>
+	<span style='color: #F00; font-size: 14px; margin-left: 43px;'>【心情】</span>
+	<a href='#' class='discuss-item' title='evr-discuss'>我想问问，你们一般是怎么藏私房钱的？</a>
+	<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 90px;'>李腾昊</span>
+	</div>
+
+	<div style='margin-top: 10px;'>
+		<span style='color: #F00; font-size: 14px; margin-left: 43px;'>【心情】</span>
+		<a href='#' class='discuss-item' title='evr-discuss'>我想问问，你们一般是怎么藏私房钱的？</a>
+		<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 90px;'>李腾昊</span>
+		</div>
+
+		<div style='margin-top: 10px;'>
+			<span style='color: #F00; font-size: 14px; margin-left: 43px;'>【心情】</span>
+			<a href='#' class='discuss-item' title='evr-discuss'>我想问问，你们一般是怎么藏私房钱的？</a>
+			<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 90px;'>李腾昊</span>
+			</div>
+
+			<div style='margin-top: 10px;'>
+				<span style='color: #F00; font-size: 14px; margin-left: 43px;'>【心情】</span>
+				<a href='#' class='discuss-item' title='evr-discuss'>我想问问，你们一般是怎么藏私房钱的？</a>
+				<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 90px;'>李腾昊</span>
+				</div>
+
+				<div style='margin-top: 10px;'>
+					<span style='color: #F00; font-size: 14px; margin-left: 43px;'>【心情】</span>
+					<a href='#' class='discuss-item' title='evr-discuss'>我想问问，你们一般是怎么藏私房钱的？</a>
+					<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 90px;'>李腾昊</span>
+					</div>
+
+					<div style='margin-top: 10px;'>
+						<span style='color: #F00; font-size: 14px; margin-left: 43px;'>【心情】</span>
+						<a href='#' class='discuss-item' title='evr-discuss'>我想问问，你们一般是怎么藏私房钱的？</a>
+						<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 90px;'>杰斯提斯奥特曼</span>
+						</div>
+
+						<div style='margin-top: 10px;'>
+							<span style='color: #F00; font-size: 14px; margin-left: 43px;'>【心情】</span>
+							<a href='#' class='discuss-item' title='evr-discuss'>我想问问，你们一般是怎么藏私房钱的？</a>
+							<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 90px;'>迪迦奥特曼</span>
+							</div>
+
+							<div style='margin-top: 10px;'>
+								<span style='color: #F00; font-size: 14px; margin-left: 43px;'>【心情】</span>
+								<a href='#' class='discuss-item' title='evr-discuss'>我想问问，你们一般是怎么藏私房钱的？</a>
+								<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 90px;'>唯创设计</span>
+								</div>
+
+								<div style='margin-top: 10px;'>
+									<span style='color: #F00; font-size: 14px; margin-left: 43px;'>【心情】</span>
+									<a href='#' class='discuss-item' title='evr-discuss'>我想问问，你们一般是怎么藏私房钱的？</a>
+									<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 90px;'>李腾昊</span>
+									</div>
+
+									<div style='margin-top: 10px;'>
+										<span style='color: #F00; font-size: 14px; margin-left: 43px;'>【心情】</span>
+										<a href='#' class='discuss-item' title='evr-discuss'>我想问问，你们一般是怎么藏私房钱的？</a>
+										<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 90px;'>来自光之国</span>
+										</div>
+
+										<div style='margin-top: 10px;'>
+											<span style='color: #F00; font-size: 14px; margin-left: 43px;'>【心情】</span>
+											<a href='#' class='discuss-item' title='evr-discuss'>我想问问，你们一般是怎么藏私房钱的？</a>
+											<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 90px;'>李腾昊</span>
+											</div>
+											<div  style='border-bottom:1px rgb(161, 161, 161) dashed;width: 87%; margin-left: 48px; margin-top: 10px;' > </div>
+
+											<p class='nav-title' style='color: rgb(122, 209, 243); border-bottom: 3px solid rgb(122, 209, 243) ;margin-left: 50px;'>本地资讯</p>
+
+<div style='margin-top: 10px;'>
+<span style='color: rgb(6, 95, 197); font-size: 14px; margin-left: 43px;'>【田家庵区】</span>
+<a href='#' class='discuss-item' title='evr-discuss'>新冠疫情本市最新通报结果，请查看详细内容</a>
+<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 60px;'>田区政府</span>
+</div>
+<div style='margin-top: 10px;'>
+	<span style='color: rgb(6, 95, 197); font-size: 14px; margin-left: 43px;'>【田家庵区】</span>
+	<a href='#' class='discuss-item' title='evr-discuss'>新冠疫情本市最新通报结果，请查看详细内容</a>
+	<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 60px;'>田区政府</span>
+	</div>
+	<div style='margin-top: 10px;'>
+		<span style='color: rgb(6, 95, 197); font-size: 14px; margin-left: 43px;'>【田家庵区】</span>
+		<a href='#' class='discuss-item' title='evr-discuss'>新冠疫情本市最新通报结果，请查看详细内容</a>
+		<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 60px;'>田区政府</span>
+		</div>
+		<div style='margin-top: 10px;'>
+			<span style='color: rgb(6, 95, 197); font-size: 14px; margin-left: 43px;'>【田家庵区】</span>
+			<a href='#' class='discuss-item' title='evr-discuss'>新冠疫情本市最新通报结果，请查看详细内容</a>
+			<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 60px;'>田区政府</span>
+			</div>
+			<div style='margin-top: 10px;'>
+				<span style='color: rgb(6, 95, 197); font-size: 14px; margin-left: 43px;'>【田家庵区】</span>
+				<a href='#' class='discuss-item' title='evr-discuss'>新冠疫情本市最新通报结果，请查看详细内容</a>
+				<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 60px;'>田区政府</span>
+				</div>
+				<div style='margin-top: 10px;'>
+					<span style='color: rgb(6, 95, 197); font-size: 14px; margin-left: 43px;'>【田家庵区】</span>
+					<a href='#' class='discuss-item' title='evr-discuss'>新冠疫情本市最新通报结果，请查看详细内容</a>
+					<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 60px;'>田区政府</span>
+					</div>
+					<div style='margin-top: 10px;'>
+						<span style='color: rgb(6, 95, 197); font-size: 14px; margin-left: 43px;'>【田家庵区】</span>
+						<a href='#' class='discuss-item' title='evr-discuss'>新冠疫情本市最新通报结果，请查看详细内容</a>
+						<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 60px;'>田区政府</span>
+						</div>
+						<div style='margin-top: 10px;'>
+							<span style='color: rgb(6, 95, 197); font-size: 14px; margin-left: 43px;'>【田家庵区】</span>
+							<a href='#' class='discuss-item' title='evr-discuss'>新冠疫情本市最新通报结果，请查看详细内容</a>
+							<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 60px;'>田区政府</span>
+							</div>
+							<div style='margin-top: 10px;'>
+								<span style='color: rgb(6, 95, 197); font-size: 14px; margin-left: 43px;'>【田家庵区】</span>
+								<a href='#' class='discuss-item' title='evr-discuss'>新冠疫情本市最新通报结果，请查看详细内容</a>
+								<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 60px;'>田区政府</span>
+								</div>
+								<div style='margin-top: 10px;'>
+									<span style='color: rgb(6, 95, 197); font-size: 14px; margin-left: 43px;'>【田家庵区】</span>
+									<a href='#' class='discuss-item' title='evr-discuss'>新冠疫情本市最新通报结果，请查看详细内容</a>
+									<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 60px;'>田区政府</span>
+									</div>
+									<div style='margin-top: 10px;'>
+										<span style='color: rgb(6, 95, 197); font-size: 14px; margin-left: 43px;'>【田家庵区】</span>
+										<a href='#' class='discuss-item' title='evr-discuss'>新冠疫情本市最新通报结果，请查看详细内容</a>
+										<span style='color: rgb(168, 168, 168); font-size: 12px;margin-left: 60px;'>田区政府</span>
+										</div>
+</div>
+</div>
+<div class="content_child" style="margin-left:2px; height: 600px; width: 1210px;">
+	<p class='nav-title'>商务服务</p>
+	<div class='server_row'>
+		<div class='server_box' title='server_nav'>
+			<p class='server_title'>公司注册</p>
+			<image src='file://E:/HuaiNanOkForum/front/images/server_1.png'
+			 style='width: 120px;height: 120px; margin-top: 15px;margin-left: 20px;'></image>
+			</div>
+
+			<div class='server_box' style='margin-left: 8px; background-color: #f2faff;' title='server_nav'>
+				<p class='server_title'>网络服务</p>
+				<image src='file://E:/HuaiNanOkForum/front/images/server_2.png'
+				 style='width: 130px;height: 90px; margin-top: 25px;margin-left: 10px;'></image>
+				</div>
+
+				<div class='server_box' style='margin-left: 8px; background-color: #fffaf5;' title='server_nav'>
+					<p class='server_title'>货运物流</p>
+					<image src='file://E:/HuaiNanOkForum/front/images/server_3.png'
+					 style='width: 120px;height: 110px; margin-top: 15px;margin-left: 20px;'></image>
+					</div>
+
+					<div class='server_box' style='margin-left: 8px; background-color: #f6ffff;' title='server_nav'>
+						<p class='server_title'>广告制作</p>
+						<image src='file://E:/HuaiNanOkForum/front/images/server_4.png'
+						 style='width: 110px;height: 110px; margin-top: 10px;margin-left: 20px;'></image>
+						</div>
+		</div>
+
+		<div class='server_row'>
+			<div class='server_box' title='server_nav' style='background-color: #f0f5ff;'>
+				<p class='server_title'>维修服务</p>
+				<image src='file://E:/HuaiNanOkForum/front/images/server_5.png'
+				 style='width: 95px;height: 80px; margin-top: 33px;margin-left: 26px;'></image>
+				</div>
+	
+				<div class='server_box' style='margin-left: 8px; background-color: #fbf7ff;' title='server_nav'>
+					<p class='server_title'>法律咨询</p>
+					<image src='file://E:/HuaiNanOkForum/front/images/server_6.png'
+					 style='width: 130px;height: 110px; margin-top: 15px;margin-left: 15px;'></image>
+					</div>
+	
+					<div class='server_box' style='margin-left: 8px;' title='server_nav'>
+						<p class='server_title'>家政服务</p>
+						<image src='file://E:/HuaiNanOkForum/front/images/server_7.png'
+						 style='width: 130px;height: 110px; margin-top: 15px;margin-left: 15px;'></image>
+						</div>
+	
+						<div class='server_box' style='margin-left: 8px;background-color: #f7fff9;' title='server_nav'>
+							<p class='server_title'>教育培训</p>
+							<image src='file://E:/HuaiNanOkForum/front/images/server_8.png'
+							 style='width: 113px;height: 100px; margin-top: 15px;margin-left: 20px;'></image>
+							</div>
+			</div>
+
+			<div class='server_row'>
+				<div class='server_box' title='server_nav' style='background-color: #f7faff;'>
+					<p class='server_title'>监控安防</p>
+					<image src='file://E:/HuaiNanOkForum/front/images/server_9.png'
+					 style='width: 110px;height: 110px; margin-top: 20px;margin-left: 20px;'></image>
+					</div>
+		
+					<div class='server_box' style='margin-left: 8px;' title='server_nav'>
+						<p class='server_title'>礼品定制</p>
+						<image src='file://E:/HuaiNanOkForum/front/images/server_10.png'
+						 style='width: 115px;height: 105px; margin-top: 15px;margin-left: 20px;'></image>
+						</div>
+		
+						<div class='server_box' style='margin-left: 8px;background-color: #f7faff;' title='server_nav'>
+							<p class='server_title'>汽车服务</p>
+							<image src='file://E:/HuaiNanOkForum/front/images/server_11.png'
+							 style='width: 115px;height: 75px; margin-top: 35px;margin-left: 20px;'></image>
+							</div>
+		
+							<div class='server_box' style='margin-left: 8px;' title='server_nav'>
+								<p class='server_title'>其他</p>
+								<image src='file://E:/HuaiNanOkForum/front/images/server_12.png'
+								 style='width: 85px;height: 85px; margin-top: 35px;margin-left: 70px;'></image>
+								</div>
+				</div>
+			
+		
+</div>
+<div class="content_child" style="margin-left:2px; height:240px; width: 1210px;">
+	<p class='nav-title' style='color: rgb(53, 156, 131); border-bottom: 3px solid rgb(53, 156, 131);'>学习相关</p>
+	<div class='study_item'>
+		<a href='#'><span class='study_item_content' title='study' style="margin-left:5px;">考研</span></a>
+		<a href='#'><span class='study_item_content' title='study'>公务员</span></a>
+		<a href='#'><span class='study_item_content' title='study'>成考</span></a>
+		<a href='#'><span class='study_item_content' title='study'>自考</span></a>
+		<a href='#'><span class='study_item_content' title='study'>教育资讯</span></a>
+		<a href='#'><span class='study_item_content' title='study'>疑问解答</span></a>
+		<a href='#'><span class='study_item_content' title='study'>技能学习</span></a>
+		</div>
+</div>
+
+<div class="content_child" style="margin-left:2px;height: 160px; display: flex;flex-direction: row; width: 1210px;">
+   <div class='friend_link'><p class='friend_link_size'>友<br>情<br>链<br>接<br></p></div>
+   <div style="display: flex;flex-direction: column;">
+   <div class='friend_link_item'>
+	   <a href='#'><span class='friend_link_item_content' title='link'>淮南人才网</span></a>
+	   <a href='#'><span class='friend_link_item_content' title='link'>淮南查查网</span></a>
+	   <a href='#'><span class='friend_link_item_content' title='link'>淮南市委市政府</span></a>
+	   <a href='#'><span class='friend_link_item_content' title='link'>随便写写</span></a>
+	   <a href='#'><span class='friend_link_item_content' title='link'>写这个好麻烦啊</span></a>
+	   <a href='#'><span class='friend_link_item_content' title='link'>淮南查查网</span></a>
+	   <a href='#'><span class='friend_link_item_content' title='link'>淮南人才网</span></a>
+	   <a href='#'><span class='friend_link_item_content' title='link'>淮南查查网</span></a>
+	   <a href='#'><span class='friend_link_item_content' title='link'>淮南人才网</span></a>
+	   <a href='#'><span class='friend_link_item_content' title='link'>淮南查查网</span></a>
+	   </div>
+	   
+	   <div class='friend_link_item'>
+		<a href='#'><span class='friend_link_item_content' title='link'>淮南人才网</span></a>
+		<a href='#'><span class='friend_link_item_content' title='link'>淮南查查网</span></a>
+		<a href='#'><span class='friend_link_item_content' title='link'>淮南人才网</span></a>
+		<a href='#'><span class='friend_link_item_content' title='link'>迪迦</span></a>
+		<a href='#'><span class='friend_link_item_content' title='link'>出现吧奥特曼</span></a>
+		<a href='#'><span class='friend_link_item_content' title='link'>淮南查查网</span></a>
+		<a href='#'><span class='friend_link_item_content' title='link'>淮南人才网</span></a>
+		<a href='#'><span class='friend_link_item_content' title='link'>淮南查查网</span></a>
+		<a href='#'><span class='friend_link_item_content' title='link'>淮南人才网</span></a>
+		<a href='#'><span class='friend_link_item_content' title='link'>淮南查查网</span></a>
+		</div>
+
+		<div class='friend_link_item'>
+			<a href='#'><span class='friend_link_item_content' title='link'>淮南人才网</span></a>
+			<a href='#'><span class='friend_link_item_content' title='link'>淮南查查网</span></a>
+			<a href='#'><span class='friend_link_item_content' title='link'>淮南人才网</span></a>
+			<a href='#'><span class='friend_link_item_content' title='link'>淮南查查网</span></a>
+			<a href='#'><span class='friend_link_item_content' title='link'>淮南人才网</span></a>
+			<a href='#'><span class='friend_link_item_content' title='link'>淮南查查网</span></a>
+			<a href='#'><span class='friend_link_item_content' title='link'>淮南人才网</span></a>
+			<a href='#'><span class='friend_link_item_content' title='link'>淮南查查网</span></a>
+			<a href='#'><span class='friend_link_item_content' title='link'>淮南人才网</span></a>
+			<a href='#'><span class='friend_link_item_content' title='link'>淮南查查网</span></a>
+			</div>
+	</div>
+</div>
+<div class="footer">
+	<ul style="text-align: center; border-bottom: 1px rgb(233, 233, 233) solid;">
+		<a href='#'><li class='footer_item'>关于我们</li></a><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+		<a href='#'><li class='footer_item'>公司产品</li></a><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+		<a href='#'><li class='footer_item'>广告发布</li></a><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+		<a href='#'><li class='footer_item'>免责声明</li></a><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+		<a href='#'><li class='footer_item'>联系方式</li></a>
+		</ul>
+		<p class='footer_item' style='margin-left: 220px; margin-top: 10px;'>淮南OK论坛版权所有 2020-2030 皖B222-20140033343-1 
+			增值电信业务经营许可证  <image src='file://E:/HuaiNanOkForum/front/images/footer.png' 
+			style="width: 15px;height: 15px; margin-left: 6px; margin-right: 6px;">皖公网安备 340403020234400085号</p>
+			<p class='footer_item' style='margin-left: 220px; margin-top: -10px;'>运营单位：安徽领动传媒有限公司　地址：淮南市田家庵区新天地大厦</p>
+			<p class='footer_item' style='margin-left: 220px; margin-top: -10px;'>网址：https://www.okforum.com 中文域名：淮南ok论坛.cn 淮南ok论坛.com</p>
+			<div>
+			<image src='#' style="width: 110px;height: 50px; margin-left: 410px;"></image>
+			<image src='#' style="width: 110px;height: 50px; margin-left: 15px;"></image>
+			<image src='#' style="width: 110px;height: 50px; margin-left: 15px;"></image>
+			   </div>
+			   
+		</div>
+</body>
+</html>

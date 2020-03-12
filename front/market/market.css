@@ -1,0 +1,178 @@
+blockquote, body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+.top {
+    width: 100%;
+    height: 38px;
+    background: #fff;
+border-bottom: 1px solid #edecec;
+}
+.top_content{
+	float:right;
+	margin-right:90px;
+	margin-top:10px;
+}
+.top_content_li{
+	display:inline-block;
+	margin-left:20px;
+		
+}
+.top_content_text{
+	text-decoration:none;
+	color:grey;
+}
+.banner{
+	width:100%;
+	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
+	height:110px;
+	display:flex;
+	flex-direction:row;
+	box-shadow: 0 5px 10px 0 rgba(111,116,132,.1);
+}
+.logo{
+	width:200px;
+	height:130px;
+	margin-left:100px;
+	margin-top:20px;
+}
+.f1{
+	display:flex;
+	flex-direction:row;
+    float:left;
+	width:500px;
+}
+.search{
+	width:400px;
+	height:40px;
+	border:2px #1b80d8 solid;
+	margin-top:35px;
+	margin-left:50px;
+	text-indent:10px;
+	font-family: microsoft yahei;
+}
+.btn{
+	color:white;
+	background:#1b80d8;
+	height:44px;
+	cursor: pointer;
+border: none;
+font-size:16px;
+margin-top:35px;
+font-family: microsoft yahei;
+}
+.erweima{
+	width:120px;
+	height:130px;
+margin-left:100px;
+	margin-top:20px;
+}
+.nav{
+	margin-top:5px;
+	width:100%;
+	min-width:1260px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
+	height:48px;
+	background:#1b80d8;
+	display:flex;
+	justify-content:space-around;
+}
+.nav_content_li{
+	display:inline-block;	
+}
+.nav_content_text{
+	display:block;
+	text-decoration:none;
+	color:white;
+	font-size:17px;
+	width:130px;
+	height:48px;
+	text-align:center;
+	  display: table-cell;
+            vertical-align:middle;
+			padding:0;
+	}
+[title="nav"]:hover{
+	background:#2099ec;
+}
+.select{
+    margin-top: 20px;
+    width:96%;
+    min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/  
+    background-color: white;
+    margin-left: 25px;
+    height: 310px; 
+}
+a{
+	font-size: 14px;
+	text-decoration: none;
+	color: rgb(126, 126, 126);
+	padding: 5px;
+}
+[title="select_item"]:hover{
+	border: 1px rgb(196, 196, 196) solid;
+	background-color: rgb(255, 252, 247);
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+}
+.selected{
+	padding: 5px;
+	border: 1px rgb(255, 170, 91) solid;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	background-color: rgb(255, 249, 245);
+}
+.market_content{
+	width:90%;
+	min-width:1150px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
+margin-top: 20px;
+margin-left: 50px;
+}
+.content-item{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	background-color: white;
+}
+.market-title{
+	font-size:18px;
+	font-weight: 600;
+	margin-left: 10px;
+	margin-top: 20px;
+	display: inline-block;
+	color: black;
+}
+[title="m_title"]:hover{
+color: rgb(255, 139, 61);
+	}
+.market-detail{
+	font-size:14px;
+	margin-left: 16px;
+	margin-top: 8px;
+	color: rgb(117, 117, 117);
+}
+[title="market_item"]:hover{
+background-color: rgb(255, 250, 244);
+}
+.footer{
+	width:100%;
+	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽*/
+	background:rgb(255, 255, 255);
+	margin-top:10px;
+	height:230px;
+	margin-bottom:10px;
+	
+}
+.footer_item{
+	display: inline-block;
+	padding: 10px;
+	font-size: 13px;
+	color: rgb(133, 133, 133);
+	margin-top: 30px;
+}

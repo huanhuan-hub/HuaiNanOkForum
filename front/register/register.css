@@ -1,0 +1,104 @@
+blockquote, body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+.top{
+	display:flex;
+	flex-direction:row;
+    width:100%;
+	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
+	height:110px;
+	box-shadow: 0 5px 10px 0 rgba(111,116,132,.1);
+	border-bottom: 1px solid #edecec;
+	background:white;
+}
+.logo{
+	width:140px;
+	height:130px;
+	margin-left:100px;
+	margin-top:30px;
+	font-size:30px;
+}
+.welcome{
+	display:block;
+	width:200px;
+	height:130px;
+	margin-left:20px;
+	margin-top:35px;
+	font-size:25px;
+}
+.return{
+	display:inline;
+	margin-left:660px;
+	margin-top:42px;
+	font-size:16px;
+	text-decoration:none;
+	color:#1b80d8;
+}
+a:hover{
+	color:grey;
+	text-decoration:underline;
+}
+.liucheng{
+	 width:100%;
+	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
+	height:70px;
+	background:#f6f6f6;
+	margin-top:10px;
+}
+.main_page{
+	display:flex;
+	align-items:center;
+	margin-top:30px;
+    width:75%;
+	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
+	height:560px;
+	background:white;
+	border-radius:10px;
+	margin-left:36px;
+}
+.main_page_input_left{
+    width:620px;
+	height:340px;
+	background:white;
+	margin-left:36px;	
+	border-right:1px #e5e5e5 solid;
+}
+.main_page_input{
+	margin-left:130px;
+}
+input{
+	text-indent:10px;
+	width:280px;
+	height:40px;
+	margin-left:5px;
+	font-family: microsoft yahei;
+}
+.footer{
+	 width:100%;
+	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
+	height:90px;
+	background:#f6f6f6;
+	margin-top:10px;
+}
+
+.tab_style_div{
+	margin-top:55px;
+}
+.tab_style{
+color:#1b80d8;
+font-size:18px;
+margin-left:76px;
+text-decoration:none;
+}
+.land{
+	width:400px;
+	display:flex;
+	height:480px;
+	background:white;
+	margin-left:20px;
+	margin-top:30px;
+	border-radius:7px;
+	
+}
