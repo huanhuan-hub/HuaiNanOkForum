@@ -27,8 +27,6 @@ border-bottom: 1px solid #edecec;
 	width:100%;
 	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
 	height:110px;
-	display:flex;
-	flex-direction:row;
 	box-shadow: 0 5px 10px 0 rgba(111,116,132,.1);
 	background-color: white;
 }
@@ -38,34 +36,29 @@ border-bottom: 1px solid #edecec;
 	margin-left:100px;
 	margin-top:20px;
 }
-.f1{
-	display:flex;
-	flex-direction:row;
-    float:left;
-	width:500px;
-}
 .search{
+	float: left;
 	width:400px;
 	height:40px;
 	border:2px #1b80d8 solid;
-	margin-top:35px;
-	margin-left:50px;
+	margin-top:30px;
 	text-indent:10px;
 	font-family: microsoft yahei;
 }
 .btn{
+	float: left;
 	color:white;
-	background:#1b80d8;
+	background-color:#1b80d8;
 	height:44px;
 	cursor: pointer;
-border: none;
+border:none;
 font-size:16px;
-margin-top:35px;
+margin-top:30px;
 font-family: microsoft yahei;
 }
 .erweima{
 	width:120px;
-	height:130px;
+	height:50px;
 margin-left:100px;
 	margin-top:20px;
 }
@@ -98,6 +91,7 @@ margin-left:100px;
 }
 .main{
 	display:flex;
+	  display: -webkit-flex;
 	flex-direction:row;
 	width:96%;
 	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
@@ -107,17 +101,20 @@ margin-left:100px;
 	color:white;
 }
 .new{
+	display: inline-block;
 	width:300px;
 	height:350px;
 	background: white;
 }
 .swiper{
+	float: right;
 	width:820px;
 	height:312px;
 	margin-left:10px;
 }
 .theme{
 	display: flex;
+	display: -webkit-flex;
 	flex-direction: row;
 	width:96%;
 	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
@@ -127,10 +124,13 @@ margin-left:100px;
 
 }
 .huainanimg{
+	float: left;
+	display: inline-block;
 	width: 306px;
 	height: 350px;
 }
 .main-title{
+	float: left;
 	width: 520px;
 	height: 350px;
 	margin-left:30px;
@@ -149,6 +149,8 @@ margin-left:100px;
 	 line-height:30px;
 }
 .land-whole{
+	display: inline-block;
+	float: right;
 	width: 359px;
 	height: 350px;
 	margin-left: 29px;
