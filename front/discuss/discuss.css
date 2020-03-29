@@ -4,10 +4,9 @@ blockquote, body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, 
     -webkit-tap-highlight-color: transparent;
 }
 .top {
-    width: 100%;
+	margin: 0 auto;
+    width:72%;
     height: 38px;
-    background: #fff;
-border-bottom: 1px solid #edecec;
 }
 .top_content{
 	float:right;
@@ -22,51 +21,55 @@ border-bottom: 1px solid #edecec;
 .top_content_text{
 	text-decoration:none;
 	color:grey;
+	font-size: 11px;
 }
 .banner{
-	width:100%;
+	margin: 0 auto;
+	width:60%;
 	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
 	height:110px;
-	display:flex;
-	flex-direction:row;
-	box-shadow: 0 5px 10px 0 rgba(111,116,132,.1);
 }
 .logo{
-	width:200px;
-	height:130px;
-	margin-left:100px;
-	margin-top:20px;
-}
-.f1{
-	display:flex;
-	flex-direction:row;
+	width:220px;
+	height:55px;
+	margin-top:30px;
+	padding-left:0;
+    vertical-align:middle;
     float:left;
-	width:500px;
+
 }
 .search{
 	width:400px;
 	height:40px;
 	border:2px #1b80d8 solid;
-	margin-top:35px;
-	margin-left:50px;
+	margin-top:30px;
 	text-indent:10px;
 	font-family: microsoft yahei;
+    padding-left:0;
+    vertical-align:middle;
+    float: left;
 }
 .btn{
+	padding-left:0;
+    vertical-align:middle;
+    float: left;
 	color:white;
-	background:#1b80d8;
+	background-color:#1b80d8;
 	height:44px;
 	cursor: pointer;
-border: none;
+border:none;
 font-size:16px;
-margin-top:35px;
+margin-top:30px;
 font-family: microsoft yahei;
 }
 .erweima{
-	width:120px;
-	height:130px;
+	padding-left:0;
+    vertical-align:middle;
+    float:right;
+	width:90px;
+	height:100px;
 margin-left:100px;
-	margin-top:20px;
+margin-top: 5px;
 }
 .nav{
 	margin-top:5px;
@@ -79,6 +82,15 @@ margin-left:100px;
 }
 .nav_content_li{
 	display:inline-block;	
+}
+[title="nav4"]:link{
+	background:#1b80d8;
+}
+[title="nav4"]:hover{
+	background:#2099ec;
+}
+[title="nav4"]:visited{
+	background:#2099ec;
 }
 .nav_content_text{
 	display:block;
@@ -96,11 +108,11 @@ margin-left:100px;
 	background:#2099ec;
 }
 .rule{
+	margin: 0 auto;
     margin-top: 20px;
-	width:90%;
+	width:60%;
 	min-width:1100px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/  
     background-color: white;
-    margin-left: 60px;
     height:200px; 
 }
 .rule_title{
@@ -114,18 +126,18 @@ margin-left:100px;
 	margin-top: 5px;
 }
 .ads{
-	width:94.9%;
+	margin: 0 auto;
+	width:77.3%;
 	min-width:1100px;
-	margin-left: 30px;
 	height:60px; 
 	margin-top: 7px;	
 }
 .discuss_content_box{
-width:90%;
+	margin: 0 auto;
+width:60%;
 min-width:1100px;
 background-color: rgb(255, 255, 255);
 height: 1600px;
-margin-left: 60px;
 margin-top: 20px;
 border:1px #1b80d8 solid;
 }
@@ -158,7 +170,8 @@ line-height: 34px;
 text-align: center;
 }
 .footer{
-	width:100%;
+	margin: 0 auto;
+	width:60%;
 	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽*/
 	background:rgb(255, 255, 255);
 	margin-top:10px;

@@ -4,10 +4,9 @@ blockquote, body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, 
     -webkit-tap-highlight-color: transparent;
 }
 .top {
-    width: 100%;
+	margin: 0 auto;
+    width:72%;
     height: 38px;
-    background: #fff;
-border-bottom: 1px solid #edecec;
 }
 .top_content{
 	float:right;
@@ -22,31 +21,38 @@ border-bottom: 1px solid #edecec;
 .top_content_text{
 	text-decoration:none;
 	color:grey;
+	font-size: 11px;
 }
 .banner{
-	width:100%;
+	margin: 0 auto;
+	width:60%;
 	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
 	height:110px;
-	box-shadow: 0 5px 10px 0 rgba(111,116,132,.1);
-	background-color: white;
 }
 .logo{
-	width:50px;
-	height:50px;
-	margin-left:30px;
-	margin-top:20px;
+	width:220px;
+	height:55px;
+	margin-top:30px;
+	padding-left:0;
+    vertical-align:middle;
+    float:left;
+
 }
 .search{
-	float: left;
 	width:400px;
 	height:40px;
 	border:2px #1b80d8 solid;
 	margin-top:30px;
 	text-indent:10px;
 	font-family: microsoft yahei;
+    padding-left:0;
+    vertical-align:middle;
+    float: left;
 }
 .btn{
-	float: left;
+	padding-left:0;
+    vertical-align:middle;
+    float: left;
 	color:white;
 	background-color:#1b80d8;
 	height:44px;
@@ -57,10 +63,13 @@ margin-top:30px;
 font-family: microsoft yahei;
 }
 .erweima{
-	width:120px;
-	height:50px;
+	padding-left:0;
+    vertical-align:middle;
+    float:right;
+	width:90px;
+	height:100px;
 margin-left:100px;
-	margin-top:20px;
+margin-top: 5px;
 }
 .nav{
 	margin-top:5px;
@@ -74,7 +83,13 @@ margin-left:100px;
 .nav_content_li{
 	display:inline-block;	
 }
+[title="nav2"]:link{
+	background:#1b80d8;
+}
 [title="nav"]:hover{
+	background:#2099ec;
+}
+[title="nav2"]:visited{
 	background:#2099ec;
 }
 .nav_content_text{
@@ -90,11 +105,11 @@ margin-left:100px;
 			padding:0;
 	}
 .select{
+	margin: 0 auto;
     margin-top: 20px;
-    width:96%;
+    width:60%;
     min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/  
     background-color: white;
-    margin-left: 25px;
     height: 310px; 
 }
 a{
@@ -104,13 +119,8 @@ a{
 	padding: 5px;
 }
 [title="select_item"]:hover{
-	border: 1px rgb(196, 196, 196) solid;
+	outline: 1px rgb(196, 196, 196) solid;
 	background-color: rgb(255, 244, 244);
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-ms-border-radius: 5px;
-	-o-border-radius: 5px;
 }
 .selected{
 	padding: 5px;
@@ -136,7 +146,8 @@ a{
 }
 .recruit_content_right{
 	width: 23.8%;
-	float: right;	
+	float: right;
+	margin-right: 40px;	
 }
 .recruit_content_right_title{
 	text-align: center;

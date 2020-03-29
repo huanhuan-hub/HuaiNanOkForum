@@ -4,14 +4,12 @@ blockquote, body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, 
     -webkit-tap-highlight-color: transparent;
 }
 .top{
+	margin:0 auto;
 	display:flex;
 	flex-direction:row;
-    width:100%;
-	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
+	width:70%;
+	min-width: 1200px;
 	height:110px;
-	box-shadow: 0 5px 10px 0 rgba(111,116,132,.1);
-	border-bottom: 1px solid #edecec;
-	background:white;
 }
 .logo{
 	width:140px;
@@ -30,8 +28,7 @@ blockquote, body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, 
 }
 .return{
 	display:inline;
-	margin-left:660px;
-	margin-top:42px;
+	margin-left:600px;
 	font-size:16px;
 	text-decoration:none;
 	color:#1b80d8;

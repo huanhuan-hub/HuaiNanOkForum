@@ -1,0 +1,98 @@
+blockquote, body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, li, ol, p, pre, td, textarea, th, ul {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+.top {
+    width: 100%;
+    height: 38px;
+    background: #fff;
+border-bottom: 1px solid #edecec;
+}
+.top_content{
+	float:right;
+	margin-right:90px;
+	margin-top:10px;
+}
+.top_content_li{
+	display:inline-block;
+	margin-left:20px;
+		
+}
+.top_content_text{
+	text-decoration:none;
+	color:grey;
+}
+.banner{
+	width:100%;
+	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
+	height:110px;
+	box-shadow: 0 5px 10px 0 rgba(111,116,132,.1);
+	background-color: white;
+}
+.logo{
+	width:50px;
+	height:50px;
+	margin-left:30px;
+	margin-top:20px;
+}
+.search{
+	float: left;
+	width:400px;
+	height:40px;
+	border:2px #1b80d8 solid;
+	margin-top:30px;
+	text-indent:10px;
+	font-family: microsoft yahei;
+}
+.btn{
+	float: left;
+	color:white;
+	background-color:#1b80d8;
+	height:44px;
+	cursor: pointer;
+border:none;
+font-size:16px;
+margin-top:30px;
+font-family: microsoft yahei;
+}
+.erweima{
+	width:120px;
+	height:50px;
+margin-left:100px;
+	margin-top:20px;
+}
+.nav{
+	margin-top:5px;
+	width:100%;
+	min-width:1260px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
+	height:48px;
+	background:#1b80d8;
+	display:flex;
+	justify-content:space-around;
+}
+.nav_content_li{
+	display:inline-block;	
+}
+[title="nav4"]:link{
+	background:#1b80d8;
+}
+[title="nav"]:hover{
+	background:#2099ec;
+}
+[title="nav4"]:visited{
+	background:#2099ec;
+}
+.nav_content_text{
+	display:block;
+	text-decoration:none;
+	color:white;
+	font-size:17px;
+	width:130px;
+	height:48px;
+	text-align:center;
+	  display: table-cell;
+            vertical-align:middle;
+			padding:0;
+	}
+

@@ -4,45 +4,144 @@
 <meta charset="utf-8">
 <title>淮南OK论坛-招聘</title>
 <link rel="stylesheet" type="text/css" href="server.css">
+<script src="https://cdn.staticfile.org/jquery/1.11.1/jquery.min.js"></script>
 </head>
 
 <body style="background:#f6f6f6; font-size: 14px;font-family: microsoft yahei;">
-<div class="top">
-<ul class="top_content">
-<li class="top_content_li"><a href="file:///E:/HuaiNanOkForum/front/register/register.html" class="top_content_text">注册</a></li>
-<li class="top_content_li"><a href="file:///E:/HuaiNanOkForum/front/land/land.html" class="top_content_text">登录</a></li>
-<li class="top_content_li"><image style='width:12px;height:12px;margin-left:10px;' class="top_content_text"  src='file:///E:/HuaiNanOkForum/front/images/tele.png'></image></li>
-<li class="top_content_li"><span  class="top_content_text" style="margin-left:-12px;">0554-3232565</span></li>
-</ul>
-</div>
-<div class="banner">
-<div  class="logo">
-<image src="#" alt="logo"></image>
-</div>
-<form>
-<div class="f1">
-<input type="text" placeholder="请输入要搜索的职位" class="search f1"></input>
-<input type="submit" class="btn " value="搜索" style="width:88px;"></input>
-</div>
-</form>
-<div class="erweima">
-<image src="#" alt="小程序二维码"></image>
-</div>
-</div>
-<div class="nav">
-<ul class="nav_content">
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/shouye/shouye.html" class="nav_content_text" title="nav">首页</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/recruit/recruit.html" class="nav_content_text" title="nav">招聘</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/job/job.html" class="nav_content_text" title="nav">求职</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/discuss/discuss.html" class="nav_content_text" title="nav">交流</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/market/market.html" class="nav_content_text" title="nav">市场</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/server/server.html" class="nav_content_text" title="nav">服务</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/study/study.html" class="nav_content_text" title="nav">学习</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/information/information.html" class="nav_content_text" title="nav">资讯</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/active/active.html" class="nav_content_text" title="nav">活动</a></li>
-</ul>
-</div>
-<div class='select'>5fgfgf
+    <div style='background-color: rgb(255, 255, 255);width: 100%;border-bottom: 1px solid #edecec;'>
+    <div class="top">
+        <ul class="top_content">
+        <li class="top_content_li"><a href="file:///E:/HuaiNanOkForum/front/register/register.html" class="top_content_text">注册</a></li>
+        <li class="top_content_li"><a href="file:///E:/HuaiNanOkForum/front/land/land.html" class="top_content_text">登录</a></li>
+        <li class="top_content_li"><image style='width:12px;height:12px;margin-left:10px;' class="top_content_text"  src='file:///E:/HuaiNanOkForum/front/images/tele.png'></image></li>
+        <li class="top_content_li"><span  class="top_content_text" style="margin-left:-12px;">0554-3232565</span></li>
+        </ul>
+        </div>
     </div>
+        <div style='width: 100%;background-color: white;'>
+        <div class="banner">
+            <image src="file://E:/HuaiNanOkForum/front/images/logo.png" alt="logo" class='logo'></image>
+            <form style='display: inline-block;margin-left: 150px;'>
+            <input type="text" placeholder="请输入要搜索的职位" class="search"></input>
+            <input type="submit" class="btn" value="搜索" style="width:88px;"></input>
+            </form>
+            <image  class="erweima" src="file://E:/HuaiNanOkForum/front/images/erweima.jpg" alt="小程序二维码" class='erweima'></image>
+        </div>
+        </div>
+        <div class="nav">
+        <ul class="nav_content">
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/shouye/shouye.html" class="nav_content_text" title="nav">首页</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/recruit/recruit.html" class="nav_content_text" title="nav">招聘</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/job/job.html" class="nav_content_text" title="nav">求职</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/discuss/discuss.html" class="nav_content_text" title="nav">交流</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/market/market.html" class="nav_content_text" title="nav">市场</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/server/server.html" class="nav_content_text" title="nav6">服务</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/study/study.html" class="nav_content_text" title="nav">学习</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/information/information.html" class="nav_content_text" title="nav">资讯</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/active/active.html" class="nav_content_text" title="nav">活动</a></li>
+        </ul>
+        </div>
+<div class='select'>
+    <a class='server_item' href='#' title='server_item_selected'>公司注册</a>
+        <a class='server_item' href='#' title='server_item_selected'>网络服务</a>
+            <a class='server_item' href='#' title='server_item_selected'>货运物流</a>
+                <a class='server_item' href='#' title='server_item_selected'>广告制作</a>
+                    <a class='server_item' href='#' title='server_item_selected'>维修服务</a>
+                        <a class='server_item' href='#' title='server_item_selected'>法律咨询</a><br>
+                            <a class='server_item' href='#' title='server_item_selected'>家政服务</a>
+                                <a class='server_item' href='#' title='server_item_selected'>教育培训</a>
+                                    <a class='server_item' href='#' title='server_item_selected'>监控安防</a>
+                                        <a class='server_item' href='#' title='server_item_selected'>礼品定制</a>
+                                            <a class='server_item' href='#' title='server_item_selected'>汽车服务</a>
+                                                <a class='server_item' href='#' title='server_item_selected'>其他</a>
+    </div>
+ <div style="width: 65%;margin: 0 auto;padding-left: 24px;min-width: 1300px;">
+        <span class='server_content' title='server_content_selected'><!--循环列表-->
+            <image src='file://E:/HuaiNanOkForum/front/images/111.png' alt='暂无图片' class='server_content_img'></image>
+            <span class='server_content_title'>周老师 : 东北师范大学网络教育 专科和专升本招生！</span>
+                <span class='server_content_main'>投学教育学历提升中心：网络教育、成人高考、自学考试（助学加分）、中专学... </span>
+                <span class='server_content_name'>淮尚广场-合肥投学教育咨询有限公司</span>
+                <span class='server_content_tag'>企业认证</span>
+                <span class='server_content_tag'>微信小程序</span>
+                <a href='file:///E:/HuaiNanOkForum/front/server_detail/server_detail.html'><span class='server_content_connect' style='margin-left: 17px;background-color: rgb(111, 178, 209);'>查看详情</span></a>
+                <a href='#'><span class='server_content_connect'>联系商家</span></a>
+            </span>
+            
+            <span class='server_content' title='server_content_selected'><!--循环列表-->
+                <image src='file://E:/HuaiNanOkForum/front/images/111.png' alt='暂无图片' class='server_content_img'></image>
+                <span class='server_content_title'>周老师 : 东北师范大学网络教育 专科和专升本招生！</span>
+                    <span class='server_content_main'>投学教育学历提升中心：网络教育、成人高考、自学考试（助学加分）、中专学... </span>
+                    <span class='server_content_name'>淮尚广场-合肥投学教育咨询有限公司</span>
+                    <span class='server_content_tag'>企业认证</span>
+                    <span class='server_content_tag'>微信小程序</span>
+                    <a href='#'><span class='server_content_connect' style='margin-left: 17px;background-color: rgb(111, 178, 209);'>查看详情</span></a>
+                    <a href='#'><span class='server_content_connect'>联系商家</span></a>
+                </span>
+
+                <span class='server_content' title='server_content_selected'><!--循环列表-->
+                    <image src='file://E:/HuaiNanOkForum/front/images/111.png' alt='暂无图片' class='server_content_img'></image>
+                    <span class='server_content_title'>周老师 : 东北师范大学网络教育 专科和专升本招生！</span>
+                        <span class='server_content_main'>投学教育学历提升中心：网络教育、成人高考、自学考试（助学加分）、中专学... </span>
+                        <span class='server_content_name'>淮尚广场-合肥投学教育咨询有限公司</span>
+                        <span class='server_content_tag'>企业认证</span>
+                        <span class='server_content_tag'>微信小程序</span>
+                        <a href='#'><span class='server_content_connect' style='margin-left: 17px;background-color: rgb(111, 178, 209);'>查看详情</span></a>
+                        <a href='#'><span class='server_content_connect'>联系商家</span></a>
+                    </span>
+
+                    <span class='server_content' title='server_content_selected'><!--循环列表-->
+                        <image src='file://E:/HuaiNanOkForum/front/images/111.png' alt='暂无图片' class='server_content_img'></image>
+                        <span class='server_content_title'>周老师 : 东北师范大学网络教育 专科和专升本招生！</span>
+                            <span class='server_content_main'>投学教育学历提升中心：网络教育、成人高考、自学考试（助学加分）、中专学... </span>
+                            <span class='server_content_name'>淮尚广场-合肥投学教育咨询有限公司</span>
+                            <span class='server_content_tag'>企业认证</span>
+                            <span class='server_content_tag'>微信小程序</span>
+                            <a href='#'><span class='server_content_connect' style='margin-left: 17px;background-color: rgb(111, 178, 209);'>查看详情</span></a>
+                            <a href='#'><span class='server_content_connect'>联系商家</span></a>
+                        </span>
+
+                        <span class='server_content' title='server_content_selected'><!--循环列表-->
+                            <image src='file://E:/HuaiNanOkForum/front/images/111.png' alt='暂无图片' class='server_content_img'></image>
+                            <span class='server_content_title'>周老师 : 东北师范大学网络教育 专科和专升本招生！</span>
+                                <span class='server_content_main'>投学教育学历提升中心：网络教育、成人高考、自学考试（助学加分）、中专学... </span>
+                                <span class='server_content_name'>淮尚广场-合肥投学教育咨询有限公司</span>
+                                <span class='server_content_tag'>企业认证</span>
+                                <span class='server_content_tag'>微信小程序</span>
+                                <a href='#'><span class='server_content_connect' style='margin-left: 17px;background-color: rgb(111, 178, 209);'>查看详情</span></a>
+                                <a href='#'><span class='server_content_connect'>联系商家</span></a>
+                            </span>
+
+                            <span class='server_content' title='server_content_selected'><!--循环列表-->
+                                <image src='file://E:/HuaiNanOkForum/front/images/111.png' alt='暂无图片' class='server_content_img'></image>
+                                <span class='server_content_title'>周老师 : 东北师范大学网络教育 专科和专升本招生！</span>
+                                    <span class='server_content_main'>投学教育学历提升中心：网络教育、成人高考、自学考试（助学加分）、中专学... </span>
+                                    <span class='server_content_name'>淮尚广场-合肥投学教育咨询有限公司</span>
+                                    <span class='server_content_tag'>企业认证</span>
+                                    <span class='server_content_tag'>微信小程序</span>
+                                    <a href='#'><span class='server_content_connect' style='margin-left: 17px;background-color: rgb(111, 178, 209);'>查看详情</span></a>
+                                    <a href='#'><span class='server_content_connect'>联系商家</span></a>
+                                </span>
+                
+    </div>
+        <div class="footer">
+            <ul style="text-align: center; border-bottom: 1px rgb(233, 233, 233) solid;">
+                <a href='#'><li class='footer_item'>关于我们</li></a><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+                <a href='#'><li class='footer_item'>公司产品</li></a><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+                <a href='#'><li class='footer_item'>广告发布</li></a><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+                <a href='#'><li class='footer_item'>免责声明</li></a><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+                <a href='#'><li class='footer_item'>联系方式</li></a>
+                </ul>
+                <p class='footer_item' style='margin-left: 220px; margin-top: 10px;'>淮南OK论坛版权所有 2020-2030 皖B222-20140033343-1 
+                    增值电信业务经营许可证  <image src='file://E:/HuaiNanOkForum/front/images/footer.png' 
+                    style="width: 15px;height: 15px; margin-left: 6px; margin-right: 6px;">皖公网安备 340403020234400085号</p>
+                    <p class='footer_item' style='margin-left: 220px; margin-top: -10px;'>运营单位：安徽领动传媒有限公司　地址：淮南市田家庵区新天地大厦</p>
+                    <p class='footer_item' style='margin-left: 220px; margin-top: -10px;'>网址：https://www.okforum.com 中文域名：淮南ok论坛.cn 淮南ok论坛.com</p>
+                    <div>
+                    <image src='#' style="width: 110px;height: 50px; margin-left: 410px;"></image>
+                    <image src='#' style="width: 110px;height: 50px; margin-left: 15px;"></image>
+                    <image src='#' style="width: 110px;height: 50px; margin-left: 15px;"></image>
+                       </div>
+                       
+                </div>
 </body>
 </html>

@@ -4,10 +4,9 @@ blockquote, body, button, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, 
     -webkit-tap-highlight-color: transparent;
 }
 .top {
-    width: 100%;
+	margin: 0 auto;
+    width:72%;
     height: 38px;
-    background: #fff;
-border-bottom: 1px solid #edecec;
 }
 .top_content{
 	float:right;
@@ -22,51 +21,55 @@ border-bottom: 1px solid #edecec;
 .top_content_text{
 	text-decoration:none;
 	color:grey;
+	font-size: 11px;
 }
 .banner{
-	width:100%;
+	margin: 0 auto;
+	width:60%;
 	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/
 	height:110px;
-	display:flex;
-	flex-direction:row;
-	box-shadow: 0 5px 10px 0 rgba(111,116,132,.1);
+	background-color: white;
 }
 .logo{
-	width:200px;
-	height:130px;
-	margin-left:100px;
-	margin-top:20px;
-}
-.f1{
-	display:flex;
-	flex-direction:row;
+	width:220px;
+	height:55px;
+	margin-top:30px;
+	padding-left:0;
+    vertical-align:middle;
     float:left;
-	width:500px;
 }
 .search{
 	width:400px;
 	height:40px;
 	border:2px #1b80d8 solid;
-	margin-top:35px;
-	margin-left:50px;
+	margin-top:30px;
 	text-indent:10px;
 	font-family: microsoft yahei;
+    padding-left:0;
+    vertical-align:middle;
+    float: left;
 }
 .btn{
+	padding-left:0;
+    vertical-align:middle;
+    float: left;
 	color:white;
-	background:#1b80d8;
+	background-color:#1b80d8;
 	height:44px;
 	cursor: pointer;
-border: none;
+border:none;
 font-size:16px;
-margin-top:35px;
+margin-top:30px;
 font-family: microsoft yahei;
 }
 .erweima{
-	width:120px;
-	height:130px;
+	padding-left:0;
+    vertical-align:middle;
+    float:right;
+	width:90px;
+	height:100px;
 margin-left:100px;
-	margin-top:20px;
+margin-top: 5px;
 }
 .nav{
 	margin-top:5px;
@@ -79,6 +82,15 @@ margin-left:100px;
 }
 .nav_content_li{
 	display:inline-block;	
+}
+[title="nav7"]:link{
+	background:#1b80d8;
+}
+[title="nav7"]:hover{
+	background:#2099ec;
+}
+[title="nav7"]:visited{
+	background:#2099ec;
 }
 .nav_content_text{
 	display:block;
@@ -96,10 +108,163 @@ margin-left:100px;
 	background:#2099ec;
 }
 .select{
+	margin: 0 auto;
     margin-top: 20px;
-    width:96%;
+    width:60%;
     min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽度*/  
     background-color: white;
-    margin-left: 25px;
-    height: 300px; 
+    height: 365px; 
+}
+
+
+/*轮播图style*/
+#ifocus { 
+	display: inline-block;
+	width:585px;
+	height:345px;
+  	margin-top:10px;
+    border:1px solid #DEDEDE;
+    background:#F8F8F8;
+	 }
+ #ifocus_pic 
+ {
+	  display:inline-block;
+	  position:relative; 
+	  width:470px; 
+	  height:325px; 
+	  overflow:hidden; 
+	  margin:10px 0 0 10px; 
+	  }
+#ifocus_piclist { 
+position:absolute;
+ }
+#ifocus_piclist li { 
+	 width:470px;
+	 height:325px; 
+	 overflow:hidden;
+ }
+#ifocus_piclist img {
+	 width:470px;
+	  height:355px; 
+	  }
+#ifocus_btn { 
+     display:inline-block; 
+	 width:91px; 
+	 margin:9px 9px 0 0; 
+	 }
+#ifocus_btn li { 
+     width:91px; 
+	 height:87px; 
+	 cursor:pointer; 
+	 opacity:0.5;
+	  -moz-opacity:0.5; 
+	  filter:alpha(opacity=50); 
+	  }
+#ifocus_btn img { 
+ 	width:85px;
+	height:63px;
+    margin:2px 0 0 4px; 
+	}
+#ifocus_btn .current {
+	 background: url(i/ifocus_btn_bg.gif) no-repeat; 
+	 opacity:1; -moz-opacity:1; filter:alpha(opacity=100); 
+	 }
+#ifocus_opdiv { 
+	  position:absolute; 
+	  left:0; 
+	  bottom:0; 
+	  width:585px;
+	   height:35px;
+		background:#000;
+		 opacity:0.5; 
+		 -moz-opacity:0.5; 
+		 filter:alpha(opacity=50); 
+   }
+#ifocus_tx { 
+  position:absolute; 
+  left:3px; 
+  bottom:8px; 
+  color:#FFF; }
+#ifocus_tx .normal { 
+  display:none;
+  }
+  .study_right{
+	  float: right;
+	  margin-top: 10px;
+	display: inline-block;
+	width:620px;
+	height: 340px;
+position:absolute;
+margin-left: 20px;
+}
+.study_title{
+	display:block;
+	width: 90px;
+	height: 35px;
+	color: white;
+	background-color: rgb(255, 105, 36);
+	text-align: center;
+	line-height: 35px;
+}
+.study_num_first{
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	color: white;
+	background-color: rgb(255, 105, 36);
+	margin-top: 15px;
+	text-align: center;
+	line-height: 22px; 
+}
+.study_num_second{
+	display: inline-block;
+	width: 21px;
+	height: 21px;
+	color: white;
+	background-color: rgb(255, 160, 52);
+	margin-top: 15px;
+	text-align: center;
+	line-height: 21px; 
+}
+.study_num{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	color: white;
+	background-color: rgb(197, 197, 197);
+	margin-top: 15px;
+	text-align: center;
+	line-height: 20px; 
+}
+.study_content_item_first{
+	color: rgb(255, 105, 36);
+	font-size: 17px;
+	margin-left: 10px;
+}
+.study_content_item_second{
+	color: rgb(255, 160, 52);
+	font-size: 16px;
+	margin-left: 10px;
+}
+.study_content_item{
+	color: rgb(110, 110, 110);
+	font-size: 15px;
+	margin-left: 10px;
+}
+  .footer{
+	  margin:0 auto;
+	width:60%;
+	min-width:1200px; /* 防止窗口缩小元素挤到一起，设置一个最小宽*/
+	background:rgb(255, 255, 255);
+	margin-top:10px;
+	height:230px;
+	margin-bottom:10px;
+	
+}
+.footer_item{
+	display: inline-block;
+	padding: 10px;
+	font-size: 13px;
+	color: rgb(133, 133, 133);
+	margin-top: 30px;
 }

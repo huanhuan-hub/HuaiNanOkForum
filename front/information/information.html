@@ -2,47 +2,162 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="apple-touch-fullscreen" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="tab.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--全屏swiper-->
+<link rel="stylesheet" type="text/css" href="normalize.css" /><!--全屏swiper-->
+<link rel="stylesheet" type="text/css" href="demo.css"><!--全屏swiper-->
+<link rel="stylesheet" href="app.css"><!--全屏swiper-->
+
 <title>淮南OK论坛-招聘</title>
 <link rel="stylesheet" type="text/css" href="information.css">
+<script src="https://cdn.staticfile.org/jquery/1.11.1/jquery.min.js"></script>
+
 </head>
 
 <body style="background:#f6f6f6; font-size: 14px;font-family: microsoft yahei;">
-<div class="top">
-<ul class="top_content">
-<li class="top_content_li"><a href="file:///E:/HuaiNanOkForum/front/register/register.html" class="top_content_text">注册</a></li>
-<li class="top_content_li"><a href="file:///E:/HuaiNanOkForum/front/land/land.html" class="top_content_text">登录</a></li>
-<li class="top_content_li"><image style='width:12px;height:12px;margin-left:10px;' class="top_content_text"  src='file:///E:/HuaiNanOkForum/front/images/tele.png'></image></li>
-<li class="top_content_li"><span  class="top_content_text" style="margin-left:-12px;">0554-3232565</span></li>
-</ul>
-</div>
-<div class="banner">
-<div  class="logo">
-<image src="#" alt="logo"></image>
-</div>
-<form>
-<div class="f1">
-<input type="text" placeholder="请输入要搜索的职位" class="search f1"></input>
-<input type="submit" class="btn " value="搜索" style="width:88px;"></input>
-</div>
-</form>
-<div class="erweima">
-<image src="#" alt="小程序二维码"></image>
-</div>
-</div>
-<div class="nav">
-<ul class="nav_content">
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/shouye/shouye.html" class="nav_content_text" title="nav">首页</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/recruit/recruit.html" class="nav_content_text" title="nav">招聘</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/job/job.html" class="nav_content_text" title="nav">求职</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/discuss/discuss.html" class="nav_content_text" title="nav">交流</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/market/market.html" class="nav_content_text" title="nav">市场</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/server/server.html" class="nav_content_text" title="nav">服务</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/study/study.html" class="nav_content_text" title="nav">学习</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/information/information.html" class="nav_content_text" title="nav">资讯</a></li>
-<li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/active/active.html" class="nav_content_text" title="nav">活动</a></li>
-</ul>
-</div>
-<div class='select'>7
+    <div style='background-color: rgb(255, 255, 255);width: 100%;border-bottom: 1px solid #edecec;'>
+    <div class="top">
+        <ul class="top_content">
+        <li class="top_content_li"><a href="file:///E:/HuaiNanOkForum/front/register/register.html" class="top_content_text">注册</a></li>
+        <li class="top_content_li"><a href="file:///E:/HuaiNanOkForum/front/land/land.html" class="top_content_text">登录</a></li>
+        <li class="top_content_li"><image style='width:12px;height:12px;margin-left:10px;' class="top_content_text"  src='file:///E:/HuaiNanOkForum/front/images/tele.png'></image></li>
+        <li class="top_content_li"><span  class="top_content_text" style="margin-left:-12px;">0554-3232565</span></li>
+        </ul>
+        </div>
     </div>
+        <div style='background-color: white;width: 100%;'>
+        <div class="banner">
+            <image src="file://E:/HuaiNanOkForum/front/images/logo.png" alt="logo" class='logo'></image>
+            <form style='display: inline-block;margin-left: 150px;'>
+            <input type="text" placeholder="请输入要搜索的职位" class="search"></input>
+            <input type="submit" class="btn" value="搜索" style="width:88px;"></input>
+            </form>
+            <image  class="erweima" src="file://E:/HuaiNanOkForum/front/images/erweima.jpg" alt="小程序二维码" class='erweima'></image>
+        </div>
+        </div>
+        <div class="nav">
+        <ul class="nav_content">
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/shouye/shouye.html" class="nav_content_text" title="nav">首页</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/recruit/recruit.html" class="nav_content_text" title="nav">招聘</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/job/job.html" class="nav_content_text" title="nav">求职</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/discuss/discuss.html" class="nav_content_text" title="nav">交流</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/market/market.html" class="nav_content_text" title="nav">市场</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/server/server.html" class="nav_content_text" title="nav">服务</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/study/study.html" class="nav_content_text" title="nav">学习</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/information/information.html" class="nav_content_text" title="nav8">资讯</a></li>
+        <li class="nav_content_li"><a href="file:///E:/HuaiNanOkForum/front/active/active.html" class="nav_content_text" title="nav">活动</a></li>
+        </ul>
+        </div>
+<div class='shouping'>
+<a class='shouping_firnews' title='news' href='file:///E:/HuaiNanOkForum/front/information_detail/information_detail.html'>习近平：中国人民给我们力量和信心战胜疫情</a><br>
+<a class='shouping_secnews' title='news' href=''>美国成首个连续2天新增确诊破万国家</a>
+<a class='shouping_secnews' title='news' href='' style='margin-left: 15px;'>美国成首个连续2天新增确诊破万国家</a><br>
+<a class='shouping_secnews' title='news' href=''>美国成首个连续2天新增确诊破万国家</a>
+<a class='shouping_secnews' title='news' href='' style='margin-left: 15px;'>美国成首个连续2天新增确诊破万国家</a><br>
+<a class='shouping_firnews' title='news' href='' style='margin-top: 10px;'>罕见！特朗普紧急致电文在寅 要韩国援助医疗设备</a><br>
+<a class='shouping_secnews' title='news' href=''>美国成首个连续2天新增确诊破万国家</a>
+<a class='shouping_secnews' title='news' href='' style='margin-left: 15px;'>美国成首个连续2天新增确诊破万国家</a><br>
+<a class='shouping_secnews' title='news' href=''>美国成首个连续2天新增确诊破万国家</a>
+<a class='shouping_secnews' title='news' href='' style='margin-left: 15px;'>美国成首个连续2天新增确诊破万国家</a><br>
+<a class='shouping_secnews' title='news' href=''>美国成首个连续2天新增确诊破万国家</a>
+<a class='shouping_secnews' title='news' href='' style='margin-left: 15px;'>美国成首个连续2天新增确诊破万国家</a>
+</div>
+        <div style='margin: 0 auto;width: 63%;min-width: 1200px;'>
+        <div class='more_info'>更多资讯</div>
+        </div>
+
+        <div style='margin: 0 auto;width: 63%; background-color: white;min-width: 1200px;'><!--资讯循环列表-->
+        <div class="info-page-list">
+            <div class="info-page-img">
+                <a href="javascript:;">
+                    <img src="file:///E:/HuaiNanOkForum/front/images/page19.png">
+                </a>
+            </div>
+            <div class="info-page-text">
+                <h2>
+                    <a href="javascript:;">全新奥迪A6 Avant官图 跟随A6更新的脚步全新奥迪A6 Avant官图 跟随A6更新的脚步全新奥迪A6 Avant官图 跟随A6更新的脚步，</a>
+                </h2>
+                <p>
+                    <em>2018年04月14日</em>
+                    <em>来源：海外网</em>
+                    <image src='file:///E:/HuaiNanOkForum/front/images/icon-pl.png' class='comment_img'></image>
+                    <span class="info-comment">22</span>
+                </p>
+            </div>
+        </div>
+        </div>
+
+        <div style='margin: 0 auto;width: 63%; background-color: white;min-width: 1200px;'><!--资讯循环列表-->
+            <div class="info-page-list">
+                <div class="info-page-img">
+                    <a href="javascript:;">
+                        <img src="file:///E:/HuaiNanOkForum/front/images/page19.png">
+                    </a>
+                </div>
+                <div class="info-page-text">
+                    <h2>
+                        <a href="javascript:;">全新奥迪A6 Avant官图 跟随A6更新的脚步全新奥迪A6 Avant官图 跟随A6更新的脚步全新奥迪A6 Avant官图 跟随A6更新的脚步，</a>
+                    </h2>
+                    <p>
+                        <em>2018年04月14日</em>
+                        <em>来源：海外网</em>
+                        <image src='file:///E:/HuaiNanOkForum/front/images/icon-pl.png' class='comment_img'></image>
+                        <span class="info-comment">22</span>
+                    </p>
+                </div>
+            </div>
+            </div>
+
+            <div style='margin: 0 auto;width: 63%; background-color: white;min-width: 1200px;'><!--资讯循环列表-->
+                <div class="info-page-list">
+                    <div class="info-page-img">
+                        <a href="javascript:;">
+                            <img src="file:///E:/HuaiNanOkForum/front/images/page19.png">
+                        </a>
+                    </div>
+                    <div class="info-page-text">
+                        <h2>
+                            <a href="javascript:;">全新奥迪A6 Avant官图 跟随A6更新的脚步全新奥迪A6 Avant官图 跟随A6更新的脚步全新奥迪A6 Avant官图 跟随A6更新的脚步，</a>
+                        </h2>
+                        <p>
+                            <em>2018年04月14日</em>
+                            <em>来源：海外网</em>
+                            <image src='file:///E:/HuaiNanOkForum/front/images/icon-pl.png' class='comment_img'></image>
+                            <span class="info-comment">22</span>
+                        </p>
+                    </div>
+                </div>
+                </div>
+        
+       
+
+        <div class="footer">
+            <ul style="text-align: center; border-bottom: 1px rgb(233, 233, 233) solid;">
+                <a href='#'><li class='footer_item'>关于我们</li></a><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+                <a href='#'><li class='footer_item'>公司产品</li></a><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+                <a href='#'><li class='footer_item'>广告发布</li></a><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+                <a href='#'><li class='footer_item'>免责声明</li></a><image src='file://E:/HuaiNanOkForum/front/images/space-line.png' style='height: 11px; width: 5px;margin-left: 10px;'></image>
+                <a href='#'><li class='footer_item'>联系方式</li></a>
+                </ul>
+                <p class='footer_item' style='margin-left: 220px; margin-top: 10px;'>淮南OK论坛版权所有 2020-2030 皖B222-20140033343-1 
+                    增值电信业务经营许可证  <image src='file://E:/HuaiNanOkForum/front/images/footer.png' 
+                    style="width: 15px;height: 15px; margin-left: 6px; margin-right: 6px;">皖公网安备 340403020234400085号</p>
+                    <p class='footer_item' style='margin-left: 220px; margin-top: -10px;'>运营单位：安徽领动传媒有限公司　地址：淮南市田家庵区新天地大厦</p>
+                    <p class='footer_item' style='margin-left: 220px; margin-top: -10px;'>网址：https://www.okforum.com 中文域名：淮南ok论坛.cn 淮南ok论坛.com</p>
+                    <div>
+                    <image src='#' style="width: 110px;height: 50px; margin-left: 410px;"></image>
+                    <image src='#' style="width: 110px;height: 50px; margin-left: 15px;"></image>
+                    <image src='#' style="width: 110px;height: 50px; margin-left: 15px;"></image>
+                       </div>
+                       
+                </div>
 </body>
 </html>
